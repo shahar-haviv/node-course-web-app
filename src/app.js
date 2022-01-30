@@ -7,7 +7,7 @@ const geocode = require('./utils/geocode')
 const forcast = require('./utils/forcast')
 
 // env veribels
-const port = '3000'
+const port = process.env.PORT || 3000
 
 const app = express()
 // Define paths for Express config

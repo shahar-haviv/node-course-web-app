@@ -1,8 +1,7 @@
 // const { response } = require("express")
 //  const e = require("express")
 
-const baseUrl = 'http://localhost:3000/whether?'
-const address = 'address=tel%20aviv'
+const baseUrl = '/whether?'
 
 
 const weatherform = document.querySelector('form')
@@ -18,6 +17,7 @@ weatherform.addEventListener('submit', (e) => {
     msgTwo.textContent = ''
 
     const location = ('address=' + search.value)
+
     fetch(baseUrl + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
