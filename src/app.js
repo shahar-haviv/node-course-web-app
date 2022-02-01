@@ -75,7 +75,8 @@ app.get('/whether', (req, res) => {
                 res.send({
                     data: dataforcats,
                     location: place_name,
-                    address: req.query.address
+                    address: req.query.address,
+                    img: dataforcats[1]
                 })
             }
         })

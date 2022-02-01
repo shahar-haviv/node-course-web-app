@@ -23,8 +23,9 @@ weatherform.addEventListener('submit', (e) => {
             if (data.error) {
                 msgOne.textContent = data.error
             } else {
-                msgOne.textContent = data.data
+                msgOne.textContent = data.data[0]
                 msgTwo.textContent = data.location
+                document.getElementById("img").src = data.data[1]
             }
 
         })
